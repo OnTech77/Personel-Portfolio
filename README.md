@@ -37,17 +37,29 @@ npm run preview
 
 ```text
 .
-├── index.html        # Document metadata and app entry point
+├── index.html
 ├── src/
-│   ├── main.jsx      # Portfolio content and React components
-│   └── styles.css    # Responsive visual system
+│   ├── App.jsx                    # Composes the page sections
+│   ├── main.jsx                   # React application entry point
+│   ├── components/
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── SectionLabel.jsx
+│   │   ├── SelectedWork.jsx
+│   │   └── Skills.jsx
+│   ├── data/
+│   │   └── portfolio.js           # Projects, skills, toolkit and links
+│   └── styles.css                 # Shared responsive visual system
 ├── package.json
 └── README.md
 ```
 
 ## Content updates
 
-Project details, timeline entries, and skills are data-driven near the top of `src/main.jsx`. Update contact and social links there as needed. The contact email currently uses the Kingston student address supplied in the source profile; replace it if you prefer a personal address. The final-year project is presented as in progress and intentionally has no invented title or outcomes.
+Edit project details, skills, toolkit entries, and contact/social links in `src/data/portfolio.js`. Update section content in the matching component under `src/components/`; `src/App.jsx` controls section order. The contact email currently uses the Kingston student address supplied in the source profile; replace it if you prefer a personal address. The final-year project is presented as in progress and intentionally has no invented title or outcomes.
 
 ## Deployment
 
