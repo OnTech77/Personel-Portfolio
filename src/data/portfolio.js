@@ -1,38 +1,40 @@
+const image = (name) => `${import.meta.env.BASE_URL}images/${name}`;
+
 export const projects = [
   {
     number: '01', title: 'FacilityHub', kind: 'FULL-STACK · INTERNSHIP PROJECT',
     description: 'A facilities-maintenance platform that brings clients, dispatchers and tradespeople into one workflow. The team built ticket and job flows backed by role-aware screens, REST APIs and a relational database.',
-    stack: ['React', 'Node.js', 'Express', 'MySQL'], tone: 'mint', image: '/images/facilityhub-tickets.png', imageAlt: 'FacilityHub maintenance ticket dashboard',
+    stack: ['React', 'Node.js', 'Express', 'MySQL'], tone: 'mint', image: image('facilityhub-tickets.png'), imageAlt: 'FacilityHub maintenance ticket dashboard',
   },
   {
     number: '02', title: 'Travel Jabs', kind: 'FULL-STACK · UNIVERSITY PROJECT',
     description: 'A patient-journey application for managing clinic patients, appointments and vaccination records. React screens connect to an Express REST API and MySQL database, with authentication and role-aware views.',
-    stack: ['React', 'Express', 'MySQL', 'Authentication'], tone: 'lilac', image: '/images/travel-jabs-patients.png', imageAlt: 'Travel Jabs patient list screen with sample records blurred', imageNote: 'SAMPLE RECORDS BLURRED',
+    stack: ['React', 'Express', 'MySQL', 'Authentication'], tone: 'lilac', image: image('travel-jabs-patients.png'), imageAlt: 'Travel Jabs patient list screen with sample demonstration records',
   },
   {
     number: '03', title: 'Student Expense Tracker', kind: 'POWER APPS · GROUP 17',
     description: 'A student-focused budgeting app for setting category budgets, logging income and expenses, reviewing recent transactions and understanding spending through visual summaries. Designed in Figma and developed in Power Apps with OneDrive Excel as its data source.',
-    stack: ['Power Apps', 'Excel', 'Figma', 'Budgeting'], tone: 'blue', image: '/images/student-expense-tracker.png', imageAlt: 'Student Expense Tracker budget screen with category budgets and a spending chart', imageFit: 'contain',
+    stack: ['Power Apps', 'Excel', 'Figma', 'Budgeting'], tone: 'blue', image: image('student-expense-tracker.png'), imageAlt: 'Student Expense Tracker budget screen with category budgets and a spending chart', imageFit: 'contain',
   },
   {
     number: '04', title: 'Fitness & Diet Tracker', kind: 'PRODUCT DESIGN · FIGMA',
     description: 'A mobile fitness concept shaped around workout plans and at-a-glance activity goals. Wireframes and linked screens explore navigation, workout details and progress summaries.',
-    stack: ['Figma', 'User flows', 'Prototyping'], tone: 'peach', image: '/images/fitness-tracker-concept.png', imageAlt: 'Fitness tracker mobile interface concept', imageFit: 'contain',
+    stack: ['Figma', 'User flows', 'Prototyping'], tone: 'peach', image: image('fitness-tracker-concept.png'), imageAlt: 'Fitness tracker mobile interface concept', imageFit: 'contain',
   },
   {
     number: '05', title: 'User Profile Builder', kind: 'JAVA · DESKTOP APPLICATION',
     description: 'A Java Swing application for creating and managing user profile details. The interface separates titles, names and email information and supports displaying, editing and removing entries.',
-    stack: ['Java', 'Swing', 'Object-oriented design'], tone: 'mint', image: '/images/user-profile-builder.png', imageAlt: 'Java Swing User Profile Builder interface',
+    stack: ['Java', 'Swing', 'Object-oriented design'], tone: 'mint', image: image('user-profile-builder.png'), imageAlt: 'Java Swing User Profile Builder interface',
   },
   {
     number: '06', title: 'Java CV Builder', kind: 'JAVA · DESKTOP APPLICATION',
     description: 'A Java Swing desktop app for organising a CV through separate user, contact and preview views. The interface supports maintaining names, titles and email details, then reviewing a custom CV.',
-    stack: ['Java', 'Swing', 'OOP', 'Interface design'], tone: 'lilac', image: `${import.meta.env.BASE_URL}images/java-cv-builder.png`, imageAlt: 'Java Swing CV Builder showing user, contact and custom CV preview sections; sample names are blurred', imageFit: 'contain',
+    stack: ['Java', 'Swing', 'OOP', 'Interface design'], tone: 'lilac', image: image('java-cv-builder.png'), imageAlt: 'Java Swing CV Builder showing user, contact and custom CV preview sections', imageFit: 'contain',
   },
   {
     number: '07', title: 'Java Blackjack', kind: 'JAVA · INTERACTIVE GAME',
     description: 'A console-based Blackjack game structured around reusable Card, Deck and Player classes. It models hands and turns, applies game rules and reports outcomes through an interactive play loop.',
-    stack: ['Java', 'Classes & objects', 'Collections', 'Game logic'], tone: 'peach', image: `${import.meta.env.BASE_URL}images/java-blackjack.png`, imageAlt: 'Java Blackjack project source code and console output', imageFit: 'contain',
+    stack: ['Java', 'Classes & objects', 'Collections', 'Game logic'], tone: 'peach', image: image('java-blackjack.png'), imageAlt: 'Java Blackjack project source code and console output', imageFit: 'contain',
   },
   {
     number: '08', title: 'AI in the Workplace', kind: 'RESEARCH · GROUP PROJECT',
@@ -47,7 +49,7 @@ export const projects = [
   {
     number: '10', title: 'Network simulations', kind: 'CISCO PACKET TRACER · COURSEWORK',
     description: 'Designed and tested a four-subnet network in Cisco Packet Tracer, configuring DHCP pools, DNS and connectivity between devices. Extended the topology with a smart-home IoT gateway and thermostat automation, then set up an email server and verified message exchange between laptops.',
-    stack: ['Packet Tracer', 'IPv4 subnetting', 'DHCP & DNS', 'IoT', 'Email services'], tone: 'lilac', image: `${import.meta.env.BASE_URL}images/cisco-packet-tracer.png`, imageAlt: 'Cisco Packet Tracer topology with routers, servers, client devices and smart-home IoT equipment', imageFit: 'contain',
+    stack: ['Packet Tracer', 'IPv4 subnetting', 'DHCP & DNS', 'IoT', 'Email services'], tone: 'lilac', image: image('cisco-packet-tracer.png'), imageAlt: 'Cisco Packet Tracer topology with routers, servers, client devices and smart-home IoT equipment', imageFit: 'contain',
   },
 ];
 
