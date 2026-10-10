@@ -4,6 +4,7 @@ import SelectedWork from './components/SelectedWork.jsx';
 import About from './components/About.jsx';
 import Experience from './components/Experience.jsx';
 import Skills from './components/Skills.jsx';
+import SoftSkills from './components/SoftSkills.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -17,6 +18,7 @@ export default function App() {
         <About />
         <Experience />
         <Skills />
+        <SoftSkills />
         <Contact />
       </main>
       <Footer />
