@@ -1,12 +1,13 @@
 # Garv Nagar — Personal Portfolio
 
-A responsive portfolio for Garv Nagar, a Computer Science undergraduate at Kingston University London and full-stack developer. The site connects academic learning to practical work through ten project stories, completed internship experience, a readable skills overview and direct contact links.
+A responsive portfolio for Garv Nagar, a Computer Science undergraduate at Kingston University London and full-stack developer. The site connects academic learning to practical work through ten project stories, completed internship experience, technical and professional skills, and direct contact links.
 
 ## Features
 
 - Responsive, single-page portfolio with accessible landmarks and keyboard focus styles
 - Ten project cards spanning full-stack apps, Java coursework, Power Apps, product design, AI research and networking
 - Screenshot-led project cards, with original illustrative artwork for projects without supplied screenshots
+- Separate soft skills section grounded in university and internship examples
 - Completed Summer 2026 internship experience, with responsibilities and FacilityHub featured separately
 - Education and internship timeline, with coursework skills woven into project narratives
 - Reduced-motion support and mobile navigation
@@ -52,24 +53,26 @@ npm run preview
 │   │   ├── Hero.jsx
 │   │   ├── SectionLabel.jsx
 │   │   ├── SelectedWork.jsx
-│   │   └── Skills.jsx
+│   │   ├── Skills.jsx
+│   │   └── SoftSkills.jsx
 │   ├── data/
-│   │   └── portfolio.js           # Projects, skills, toolkit and links
+│   │   └── portfolio.js           # Projects, skills, experience and links
 │   └── styles.css                 # Shared responsive visual system
 ├── public/
 │   └── images/                    # Project screenshots used in the portfolio
+├── .github/workflows/deploy.yml   # Builds and publishes GitHub Pages on pushes to main
 ├── package.json
 └── README.md
 ```
 
 ## Content updates
 
-Edit project details, skills, toolkit entries, experience and contact/social links in `src/data/portfolio.js`. Update section content in the matching component under `src/components/`; `src/App.jsx` controls section order. Screenshots live in `public/images/`. The Travel Jabs patient list screenshot has its sample patient records blurred. The final-year project is presented as in progress and intentionally has no invented title or outcomes.
+Edit project details, technical and soft skills, toolkit entries, experience and contact/social links in `src/data/portfolio.js`. Update section content in the matching component under `src/components/`; `src/App.jsx` controls section order. Screenshots live in `public/images/`. Sample records in the Travel Jabs and CV Builder screenshots are blurred. The final-year project is presented as in progress and intentionally has no invented title or outcomes.
 
 ## Deployment
 
-The repository is connected to `https://github.com/OnTech77/Personel-Portfolio`. Build with `npm run build`, then publish the generated `dist/` directory using GitHub Pages or another static host. For GitHub Pages, configure the repository's Pages settings to deploy from the `dist/` artifact using a deployment workflow, or use a static hosting provider with Vite support.
+The portfolio is published at [https://ontech77.github.io/Personel-Portfolio/](https://ontech77.github.io/Personel-Portfolio/). GitHub Actions builds the Vite app and deploys the `dist/` artifact on every push to `main`; the workflow can also be started manually from the Actions tab. The Pages source is configured to use GitHub Actions. No local server is needed to view the public site.
 
 ## Credits
 
-Portfolio content is based on Garv Nagar's supplied education, experience, skills and project profile. Screenshots were supplied for the featured work; the Travel Jabs sample patient records are blurred. CSS artwork illustrates projects that did not have screenshots in the supplied folder.
+Portfolio content is based on Garv Nagar's supplied education, experience, skills and project profile. Screenshots were supplied for the featured work; sample records in the Travel Jabs and CV Builder screenshots are blurred. The Cisco Packet Tracer project summary reflects the supplied assignment report without publishing student identifiers or specific network addresses. CSS artwork illustrates projects that did not have screenshots in the supplied folder.
