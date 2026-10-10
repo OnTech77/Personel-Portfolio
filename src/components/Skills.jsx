@@ -10,10 +10,12 @@ export default function Skills() {
         <p>Grounded in fundamentals.<br className="desktop-only" /> Always learning what’s next.</p>
       </div>
       <div className="skills-list">
-        {skills.map(([number, title, detail]) => (
-          <div className="skill-row" key={number}>
-            <span className="skill-num">{number}</span><h3>{title}</h3><p>{detail}</p><ArrowUpRight size={17} />
-          </div>
+        {skills.map(({ title, detail }, index) => (
+          <article className="skill-card" key={title}>
+            <div className="skill-card-heading"><span className="skill-num">0{index + 1}</span><ArrowUpRight size={18} /></div>
+            <h3>{title}</h3>
+            <div className="skill-tags">{detail.map((skill) => <span key={skill}>{skill}</span>)}</div>
+          </article>
         ))}
       </div>
       <div className="toolkit"><span>ALSO IN MY TOOLKIT</span><div>{toolkit.map((item) => <span key={item}>{item}</span>)}</div></div>
