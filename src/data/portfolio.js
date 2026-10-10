@@ -26,13 +26,13 @@ export const projects = [
   },
   {
     number: '06', title: 'Java CV Builder', kind: 'JAVA · DESKTOP APPLICATION',
-    description: 'A graphical CV-building exercise that brings together structured user input, reusable classes and application logic to assemble a personal résumé.',
-    stack: ['Java', 'Swing', 'OOP'], tone: 'lilac', visual: 'resume',
+    description: 'A Java Swing desktop app for organising a CV through separate user, contact and preview views. The interface supports maintaining names, titles and email details, then reviewing a custom CV.',
+    stack: ['Java', 'Swing', 'OOP', 'Interface design'], tone: 'lilac', image: `${import.meta.env.BASE_URL}images/java-cv-builder.png`, imageAlt: 'Java Swing CV Builder showing user, contact and custom CV preview sections; sample names are blurred', imageFit: 'contain',
   },
   {
     number: '07', title: 'Java Blackjack', kind: 'JAVA · INTERACTIVE GAME',
-    description: 'A small interactive card game built to practise object-oriented programming, game state, conditional logic, loops and player interaction.',
-    stack: ['Java', 'Game logic', 'OOP'], tone: 'peach', visual: 'blackjack',
+    description: 'A console-based Blackjack game structured around reusable Card, Deck and Player classes. It models hands and turns, applies game rules and reports outcomes through an interactive play loop.',
+    stack: ['Java', 'Classes & objects', 'Collections', 'Game logic'], tone: 'peach', image: `${import.meta.env.BASE_URL}images/java-blackjack.png`, imageAlt: 'Java Blackjack project source code and console output', imageFit: 'contain',
   },
   {
     number: '08', title: 'AI in the Workplace', kind: 'RESEARCH · GROUP PROJECT',
@@ -46,8 +46,8 @@ export const projects = [
   },
   {
     number: '10', title: 'Network simulations', kind: 'CISCO PACKET TRACER · COURSEWORK',
-    description: 'Network topology exercises using Cisco Packet Tracer to practise device configuration, connections and foundational networking concepts in a simulated environment.',
-    stack: ['Packet Tracer', 'Networking', 'Topology'], tone: 'lilac', visual: 'network',
+    description: 'Designed and tested a four-subnet network in Cisco Packet Tracer, configuring DHCP pools, DNS and connectivity between devices. Extended the topology with a smart-home IoT gateway and thermostat automation, then set up an email server and verified message exchange between laptops.',
+    stack: ['Packet Tracer', 'IPv4 subnetting', 'DHCP & DNS', 'IoT', 'Email services'], tone: 'lilac', image: `${import.meta.env.BASE_URL}images/cisco-packet-tracer.png`, imageAlt: 'Cisco Packet Tracer topology with routers, servers, client devices and smart-home IoT equipment', imageFit: 'contain',
   },
 ];
 
@@ -56,6 +56,39 @@ export const skills = [
   { title: 'Backend & APIs', detail: ['Node.js', 'Express', 'REST APIs', 'Authentication', 'API integration'] },
   { title: 'Databases', detail: ['MySQL', 'SQL', 'Oracle SQL', 'Relational design', 'ERDs'] },
   { title: 'How I work', detail: ['Java & OOP', 'Git & GitHub', 'Agile sprints', 'Code review', 'Figma', 'Postman'] },
+];
+
+export const softSkills = [
+  {
+    title: 'Team collaboration',
+    detail: 'Worked in university project groups and an internship development team, coordinating shared tasks and contributing to sprint goals.',
+    evidence: ['Group projects', 'Agile sprints', 'Code reviews'],
+  },
+  {
+    title: 'Communication',
+    detail: 'Shared progress in Product Owner discussions, explained implementation choices with teammates, and presented project work clearly.',
+    evidence: ['Product Owner meetings', 'Presentations', 'Technical discussions'],
+  },
+  {
+    title: 'Problem solving',
+    detail: 'Investigated integration and data issues across interfaces, APIs and databases, then refined solutions through testing and debugging.',
+    evidence: ['API integration', 'Debugging', 'Network testing'],
+  },
+  {
+    title: 'Planning & organisation',
+    detail: 'Turned project requirements into manageable tasks and kept implementation, testing and documentation aligned with delivery needs.',
+    evidence: ['Sprint planning', 'Project documentation', 'Delivery'],
+  },
+  {
+    title: 'Adaptability',
+    detail: 'Moved between frontend, backend and database work during the internship, learning the existing codebase and adjusting to team feedback.',
+    evidence: ['Full-stack work', 'Feedback', 'Continuous learning'],
+  },
+  {
+    title: 'Attention to detail',
+    detail: 'Checked behaviour against requirements, verified network configurations and used reviews and testing to catch issues before delivery.',
+    evidence: ['Requirement checks', 'Configuration testing', 'Quality focus'],
+  },
 ];
 
 export const toolkit = ['Python', 'Oracle APEX', 'Power Apps', 'OneDrive Excel', 'Cisco Packet Tracer'];
