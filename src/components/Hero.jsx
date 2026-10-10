@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowDownRight, ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Sparkles } from 'lucide-react';
 import SectionLabel from './SectionLabel.jsx';
 import { profile } from '../data/portfolio.js';
 
@@ -22,7 +22,6 @@ export default function Hero() {
         <div className="art-card"><Sparkles size={17} /><span>DESIGN<br />MEETS LOGIC</span></div>
         <span className="art-coordinate">G—01</span><span className="art-bottomline">CURIOUS BY NATURE. BUILT WITH INTENTION.</span>
       </div>
-      <a className="scroll-cue" href="#work"><span>SCROLL TO EXPLORE</span><ArrowDown size={14} /></a>
     </section>
   );
 }
