@@ -128,6 +128,13 @@ export const experience = {
   ],
 };
 
+export const timeline = [
+  { period: 'Up next', title: 'Individual Project · CI6600', detail: 'Exploring a practical final-year challenge' },
+  { period: 'October 2026', title: 'Built Slidecraft', detail: 'My first vibe-coded project, made with an AI coding assistant' },
+  { period: 'Summer 2026', title: 'Full-stack Developer Intern', detail: 'CSE Connect · Kingston University' },
+  { period: '2024 — 2027', title: 'BSc (Hons) Computer Science', detail: 'Kingston University London' },
+];
+
 export const navLinks = [
   { id: 'work', label: 'Work' },
   { id: 'about', label: 'About' },

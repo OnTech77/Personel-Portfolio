@@ -1,0 +1,243 @@
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(40px, 7vw, 100px);
+  align-items: start;
+}
+
+.about-left {
+  position: sticky;
+  top: 130px;
+}
+
+.about-title {
+  margin-top: 18px;
+  font-size: clamp(42px, 5.4vw, 68px);
+  font-weight: 600;
+}
+
+.about-facts {
+  display: grid;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.about-facts span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 16px;
+  color: var(--text-soft);
+}
+
+.about-facts svg {
+  color: var(--sky);
+}
+
+.about-right {
+  display: grid;
+  gap: 22px;
+  color: var(--muted);
+}
+
+.about-lead {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+/* Timeline */
+.timeline {
+  --fill: 0;
+  position: relative;
+  display: grid;
+  gap: 30px;
+  margin: 26px 0 0;
+  padding: 0 0 0 38px;
+  list-style: none;
+}
+
+.timeline::before,
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 9px;
+  width: 2px;
+  border-radius: 2px;
+}
+
+.timeline::before {
+  background: var(--border);
+}
+
+.timeline::after {
+  background: linear-gradient(180deg, var(--sky-soft), var(--sky), var(--indigo));
+  transform-origin: top;
+  transform: scaleY(var(--fill));
+  box-shadow: 0 0 12px var(--sky);
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 6px;
+  left: -36px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--sky);
+  background: var(--bg);
+  box-shadow: 0 0 0 5px var(--sky-wash);
+  z-index: 1;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sky-text);
+}
+
+.timeline-item h3 {
+  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline-item p {
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+/* Experience */
+.experience-card {
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.experience-period {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sky-text);
+}
+
+.experience-header h3 {
+  margin-top: 10px;
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 600;
+}
+
+.experience-organisation {
+  margin-top: 6px;
+  font-size: 18px;
+  color: var(--text-soft);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: 999px;
+  background: rgba(74, 222, 128, 0.08);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-pill i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 10px #4ade80;
+}
+
+.experience-summary {
+  max-width: 760px;
+  margin-top: 22px;
+  font-size: 19px;
+  color: var(--muted);
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 32px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contribution-grid li {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-soft);
+  transition: border-color 0.3s, transform 0.3s var(--ease);
+}
+
+.contribution-grid li:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.contribution-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--sky-wash);
+  color: var(--sky);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-left {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .contribution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-header {
+    flex-direction: column;
+  }
+}
