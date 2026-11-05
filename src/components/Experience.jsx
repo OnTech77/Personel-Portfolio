@@ -16,7 +16,7 @@ export default function Experience() {
           <p className="experience-summary">{experience.summary}</p>
           <ul>{experience.contributions.map((item) => <li key={item}>{item}</li>)}</ul>
         </div>
-        <a className="experience-project-link" href="#project-01">FEATURED PROJECT <span>FACILITYHUB ↗</span></a>
+        <a className="experience-project-link" href="#project-facilityhub">FEATURED PROJECT <span>FACILITYHUB ↗</span></a>
       </article>
     </section>
   );
