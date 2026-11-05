@@ -1,0 +1,93 @@
+/* Rotating word */
+.rotating-text {
+  display: inline-grid;
+  vertical-align: bottom;
+}
+
+.rotating-word {
+  display: inline-block;
+  color: var(--sky-text);
+  font-weight: 600;
+  animation: rotate-in 0.6s var(--ease) both;
+}
+
+@keyframes rotate-in {
+  from {
+    opacity: 0;
+    transform: translateY(60%);
+    filter: blur(8px);
+  }
+}
+
+/* Split words */
+.split-word {
+  display: inline-block;
+  white-space: pre;
+  animation: word-in 0.9s var(--ease) var(--word-delay, 0ms) both;
+}
+
+@keyframes word-in {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+    filter: blur(12px);
+  }
+}
+
+/* Marquee */
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+
+.marquee-reverse .marquee-track {
+  animation-direction: reverse;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 14px;
+  padding: 12px 22px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--text-soft);
+}
+
+.marquee-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sky);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
+  }
+}
