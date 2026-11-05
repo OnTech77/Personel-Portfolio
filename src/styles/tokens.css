@@ -1,0 +1,74 @@
+/* Design tokens: midnight black, sky blue and white, with a light theme. */
+:root {
+  color-scheme: dark;
+
+  --bg: #05060a;
+  --bg-soft: #090c14;
+  --bg-elevated: #0d121d;
+  --surface: rgba(148, 163, 184, 0.06);
+  --surface-strong: rgba(148, 163, 184, 0.11);
+  --border: rgba(148, 163, 184, 0.14);
+  --border-strong: rgba(148, 163, 184, 0.28);
+
+  --text: #f5f8fc;
+  --text-soft: #d3dce8;
+  --muted: #9aa7b8;
+
+  --sky: #38bdf8;
+  --sky-strong: #0ea5e9;
+  --sky-soft: #7dd3fc;
+  --sky-text: #7dd3fc;
+  --sky-glow: rgba(56, 189, 248, 0.32);
+  --sky-wash: rgba(56, 189, 248, 0.1);
+  --indigo: #818cf8;
+
+  --button-bg: linear-gradient(135deg, #bae6fd 0%, #38bdf8 55%, #0ea5e9 100%);
+  --button-text: #03121c;
+  --heading-gradient: linear-gradient(180deg, #ffffff 25%, #a9b8cc 100%);
+  --accent-gradient: linear-gradient(100deg, #bae6fd 0%, #38bdf8 45%, #818cf8 100%);
+  --header-bg: rgba(9, 12, 20, 0.7);
+  --shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.85);
+  --grid-line: rgba(148, 163, 184, 0.08);
+
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --radius: 22px;
+  --radius-sm: 12px;
+  --container: 1200px;
+  --gutter: clamp(20px, 4vw, 40px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f8fafc;
+  --bg-soft: #f1f5f9;
+  --bg-elevated: #ffffff;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: #ffffff;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.2);
+
+  --text: #0b1220;
+  --text-soft: #1e293b;
+  --muted: #475569;
+
+  --sky: #0ea5e9;
+  --sky-strong: #0284c7;
+  --sky-soft: #38bdf8;
+  --sky-text: #0369a1;
+  --sky-glow: rgba(14, 165, 233, 0.22);
+  --sky-wash: rgba(14, 165, 233, 0.08);
+  --indigo: #6366f1;
+
+  --button-bg: linear-gradient(135deg, #0b1220 0%, #1e293b 100%);
+  --button-text: #ffffff;
+  --heading-gradient: linear-gradient(180deg, #0b1220 30%, #334155 100%);
+  --accent-gradient: linear-gradient(100deg, #0369a1 0%, #0284c7 45%, #4f46e5 100%);
+  --header-bg: rgba(255, 255, 255, 0.75);
+  --shadow: 0 30px 70px -40px rgba(15, 23, 42, 0.4);
+  --grid-line: rgba(15, 23, 42, 0.07);
+}
