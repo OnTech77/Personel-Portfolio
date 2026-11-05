@@ -1,26 +1,79 @@
-import { ArrowDownRight, ArrowUpRight, Sparkles } from 'lucide-react';
-import SectionLabel from './SectionLabel.jsx';
-import { profile } from '../data/portfolio.js';
+import { ArrowDownRight, ArrowRight, Search } from 'lucide-react';
+import HeroBackdrop from './HeroBackdrop.jsx';
+import CodeWindow from './CodeWindow.jsx';
+import SplitWords from './ui/SplitWords.jsx';
+import RotatingText from './ui/RotatingText.jsx';
+import CountUp from './ui/CountUp.jsx';
+import { openPalette, shortcutLabel, showProject } from '../lib/events.js';
+import { projects, skills, toolkit } from '../data/portfolio.js';
+
+const skillCount = new Set([...skills.flatMap((group) => group.detail), ...toolkit]).size;
+
+const stats = [
+  { count: projects.length, label: 'Projects built' },
+  { count: skillCount, label: 'Skills & tools' },
+  { text: 'Summer ’26', label: 'Internship completed' },
+  { text: '2027', label: 'Graduating' },
+];
 
 export default function Hero() {
+  const followPointer = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty('--hx', `${event.clientX - rect.left}px`);
+    event.currentTarget.style.setProperty('--hy', `${event.clientY - rect.top}px`);
+  };
+
   return (
-    <section className="hero" id="home">
-      <div className="hero-copy">
-        <SectionLabel>COMPUTER SCIENCE · KINGSTON, LONDON</SectionLabel>
-        <h1>Building useful<br />software, <span>thoughtfully.</span></h1>
-        <p className="hero-intro">I’m Garv, a full-stack developer in the making. I turn ideas into considered digital experiences—from the first interface to the data and systems behind it.</p>
-        <div className="hero-actions">
-          <a className="button button-dark" href="#work">Explore my work <ArrowDownRight size={17} /></a>
-          <a className="text-link" href={`mailto:${profile.email}`}>Get in touch <ArrowUpRight size={15} /></a>
+    <section className="hero" id="home" onPointerMove={followPointer}>
+      <HeroBackdrop />
+      <div className="container hero-grid">
+        <div className="hero-copy">
+          <a
+            className="hero-badge"
+            href="#project-slidecraft"
+            onClick={(event) => {
+              event.preventDefault();
+              showProject('slidecraft');
+            }}
+          >
+            <span className="badge-new">New</span>
+            <span className="shiny-text">Slidecraft: my first vibe-coded project</span>
+            <ArrowRight size={15} aria-hidden="true" />
+          </a>
+
+          <h1>
+            <SplitWords text="Building useful software," />
+            <SplitWords className="gradient-words" text="thoughtfully." start={280} />
+          </h1>
+
+          <p className="hero-intro">
+            I’m Garv, a Computer Science student at Kingston University London and a full-stack developer who builds{' '}
+            <RotatingText words={['clear interfaces', 'REST APIs', 'relational databases', 'AI-powered tools']} />
+          </p>
+
+          <div className="hero-actions">
+            <a className="button button-primary" href="#work">
+              Explore my work <ArrowDownRight size={18} />
+            </a>
+            <a className="button button-ghost" href="#contact">
+              Get in touch
+            </a>
+            <button type="button" className="hero-shortcut" onClick={openPalette}>
+              <Search size={15} aria-hidden="true" /> Press <kbd>{shortcutLabel}</kbd> to jump anywhere
+            </button>
+          </div>
+
+          <dl className="hero-stats">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <dt>{stat.label}</dt>
+                <dd>{stat.count ? <CountUp to={stat.count} /> : stat.text}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-        <div className="hero-meta"><span><i className="availability-dot" /> OPEN TO OPPORTUNITIES</span><span>2027 GRADUATE</span></div>
-      </div>
-      <div className="hero-art" role="img" aria-label="Abstract green and cream geometric artwork">
-        <div className="art-topline"><span>PORTFOLIO / 2026</span><span>51°24' N&nbsp; 0°18' W</span></div>
-        <div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" />
-        <div className="art-sun" /><div className="art-arch"><div className="arch-inner" /></div>
-        <div className="art-card"><Sparkles size={17} /><span>DESIGN<br />MEETS LOGIC</span></div>
-        <span className="art-coordinate">G—01</span><span className="art-bottomline">CURIOUS BY NATURE. BUILT WITH INTENTION.</span>
+
+        <CodeWindow />
       </div>
     </section>
   );
