@@ -108,6 +108,14 @@ export const experience = {
   ],
 };
 
+export const navLinks = [
+  { id: 'work', label: 'Work' },
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' },
+];
+
 export const profile = {
   name: 'Garv Nagar',
   email: 'garvnagar0101@gmail.com',
