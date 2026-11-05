@@ -254,7 +254,8 @@
 .hero-stats dd {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: clamp(22px, 2.3vw, 30px);
+  white-space: nowrap;
   font-weight: 600;
   letter-spacing: -0.03em;
 }
