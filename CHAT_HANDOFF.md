@@ -12,7 +12,18 @@ This file records the portfolio-related conversation and the decisions made so a
 - **Live URL:** [https://ontech77.github.io/Personel-Portfolio/](https://ontech77.github.io/Personel-Portfolio/)
 - **Stack:** React, JavaScript, Vite, Lucide React, custom CSS.
 - **Current verified repo state when this handoff was written (2026-11-05):** `main` at `7d43991`, tracking `origin/main`; clean working tree.
-- **Current site content:** ten project cards; education/about narrative; completed Summer 2026 internship; technical skills; soft skills; contact/social links.
+- **Current site content:** eleven project cards; education/about narrative; completed Summer 2026 internship; technical skills; soft skills; contact/social links.
+
+### November 2026 redesign
+
+On 2026-11-05 the user asked for a modern redesign with "cool features", midnight black, sky blue and white colours, inspired by Aceternity UI and React Bits, plus a Slidecraft project described as their first try at vibe coding. What was built:
+
+- Design tokens in `src/styles/tokens.css` (dark default, light theme via `data-theme` on `<html>`, set before paint in `index.html` and stored in `localStorage`). Styles are split per section in `src/styles/`.
+- No animation library was added; effects are CSS plus hooks in `src/hooks/` and primitives in `src/components/ui/`. All motion stops under `prefers-reduced-motion`.
+- Features: aurora/meteor hero with a tilting code window and count-up stats, floating glass header with active-section highlight, scroll progress and back-to-top, filterable spotlight project cards, scroll-filled timeline, skills marquee, copy-email toast, and a Cmd/Ctrl K command menu (`CommandPalette.jsx`). Components talk through window events in `src/lib/events.js` (open menu, show project, toast).
+- **Slidecraft** (`https://github.com/OnTech77/slidecraft`, created 2026-10-17) is the first, featured project. Its facts come from that repository's README: Markdown to slides, live preview, five themes, presenter, AI edits via OpenAI or local Ollama, PDF/HTML/Markdown/JSON export. Cloning it to take a real screenshot was blocked, so the card uses CSS artwork; a real screenshot in `public/images/` would be better.
+- Projects now have `slug`, `category`, `featured` and `links`. Code links were added only where a matching public repo was confirmed: Slidecraft, TravelJabs-Backend, BlackJackGame (Card/Deck/Player classes) and this repo.
+- Public ResQLedger repositories describe themselves as the Kingston University final-year project, but the site still shows the generic "Individual Project · CI6600" entry; ask the user before naming it.
 
 The site is static. Visitors use the public Pages URL; they do not need Garv’s computer, `localhost`, or a running development server. Each push to `main` runs the Pages workflow and publishes the built `dist/` output.
 
@@ -101,7 +112,7 @@ These are stated as demonstrated through project work, rather than unsupported a
 
 ## 4. Current project content
 
-Projects in `src/data/portfolio.js` (all ten):
+Projects in `src/data/portfolio.js` (ten listed here; Slidecraft was added first in November 2026, making eleven):
 
 1. **FacilityHub** — internship full-stack facilities maintenance workflow for clients, dispatchers, and tradespeople; React, Node, Express, MySQL; screenshot `facilityhub-tickets.png`.
 2. **Travel Jabs** — patient/appointment/vaccination record workflow; React, Express, MySQL, authentication; screenshot `travel-jabs-patients.png`.
@@ -144,7 +155,7 @@ Some site statements originate from earlier user-provided portfolio context. If 
 - `src/components/SelectedWork.jsx` renders cards and screenshots.
 - `src/components/SoftSkills.jsx` renders soft skills.
 - `src/components/Skills.jsx`, `About.jsx`, `Experience.jsx`, `Hero.jsx`, `Contact.jsx`, `Header.jsx`, `Footer.jsx` render the other sections.
-- `src/styles.css` has the responsive design system, larger typography adjustments, cards, and section styles.
+- `src/styles/` holds the design tokens, base styles and one stylesheet per section (see the November 2026 redesign notes).
 - `public/images/` stores the eight project image files.
 - `vite.config.js` sets the GitHub Pages base path `/Personel-Portfolio/`.
 - `.github/workflows/deploy.yml` runs `npm ci`, `npm run build`, uploads `dist`, and deploys GitHub Pages on `main` pushes or manual dispatch.
