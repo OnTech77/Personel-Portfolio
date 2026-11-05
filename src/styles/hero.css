@@ -449,7 +449,7 @@
 
 @media (max-width: 1000px) {
   .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-visual {
@@ -472,5 +472,14 @@
 
   .hero-shortcut {
     display: none;
+  }
+
+  .hero-badge {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .hero-stats dd {
+    font-size: 24px;
   }
 }
