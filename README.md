@@ -67,7 +67,7 @@ npm run preview
 
 ## Content updates
 
-Edit project details, technical and soft skills, toolkit entries, experience and contact/social links in `src/data/portfolio.js`. Update section content in the matching component under `src/components/`; `src/App.jsx` controls section order. Screenshots live in `public/images/`. Sample records in the Travel Jabs and CV Builder screenshots are blurred. The final-year project is presented as in progress and intentionally has no invented title or outcomes.
+Edit project details, technical and soft skills, toolkit entries, experience and contact/social links in `src/data/portfolio.js`. Update section content in the matching component under `src/components/`; `src/App.jsx` controls section order. Screenshots live in `public/images/`; the CV Builder screenshot shows demonstration data. The final-year project is presented as in progress and intentionally has no invented title or outcomes.
 
 ## Deployment
 
@@ -75,4 +75,4 @@ The portfolio is published at [https://ontech77.github.io/Personel-Portfolio/](h
 
 ## Credits
 
-Portfolio content is based on Garv Nagar's supplied education, experience, skills and project profile. Screenshots were supplied for the featured work; sample records in the Travel Jabs and CV Builder screenshots are blurred. The Cisco Packet Tracer project summary reflects the supplied assignment report without publishing student identifiers or specific network addresses. CSS artwork illustrates projects that did not have screenshots in the supplied folder.
+Portfolio content is based on Garv Nagar's supplied education, experience, skills and project profile. Screenshots were supplied for the featured work, including demonstration data. The Cisco Packet Tracer project summary reflects the supplied assignment report without publishing student identifiers or specific network addresses. CSS artwork illustrates projects that did not have screenshots in the supplied folder.
