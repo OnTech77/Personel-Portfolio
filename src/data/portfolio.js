@@ -1,57 +1,77 @@
 const image = (name) => `${import.meta.env.BASE_URL}images/${name}`;
 
+const repo = (name) => `https://github.com/OnTech77/${name}`;
+
+export const projectCategories = ['Web & full-stack', 'Java', 'Design & apps', 'Research & networks'];
+
 export const projects = [
   {
-    number: '01', title: 'FacilityHub', kind: 'FULL-STACK · INTERNSHIP PROJECT',
+    slug: 'slidecraft', title: 'Slidecraft', kind: 'FULL-STACK · AI · FIRST VIBE-CODED PROJECT', category: 'Web & full-stack',
+    featured: true, isNew: true, date: 'October 2026',
+    description: 'My first try at vibe coding: I built Slidecraft by describing features to an AI coding assistant, then testing and refining what it produced. It turns Markdown into slide decks with a live preview, five themes and a full-screen presenter, and can polish the wording or write speaker notes with the OpenAI API or a local Ollama model.',
+    highlights: [
+      'Slides update live as you type, with keyboard, click and swipe presenting',
+      'AI edits for a whole deck or one slide, shown as a before and after to accept or undo',
+      'PDF, HTML, Markdown and JSON export, with PDFs rendered by headless Chrome',
+      'Sanitised uploads, rate-limited AI requests and security headers on the API',
+    ],
+    stack: ['React', 'Vite', 'Node.js', 'Express', 'OpenAI API', 'Ollama', 'Puppeteer'], visual: 'slides',
+    links: { code: repo('slidecraft') },
+  },
+  {
+    slug: 'facilityhub', title: 'FacilityHub', kind: 'FULL-STACK · INTERNSHIP PROJECT', category: 'Web & full-stack', featured: true,
     description: 'A facilities-maintenance platform that brings clients, dispatchers and tradespeople into one workflow. The team built ticket and job flows backed by role-aware screens, REST APIs and a relational database.',
-    stack: ['React', 'Node.js', 'Express', 'MySQL'], tone: 'mint', image: image('facilityhub-tickets.png'), imageAlt: 'FacilityHub maintenance ticket dashboard',
+    stack: ['React', 'Node.js', 'Express', 'MySQL'], image: image('facilityhub-tickets.png'), imageAlt: 'FacilityHub maintenance ticket dashboard',
   },
   {
-    number: '02', title: 'Travel Jabs', kind: 'FULL-STACK · UNIVERSITY PROJECT',
+    slug: 'travel-jabs', title: 'Travel Jabs', kind: 'FULL-STACK · UNIVERSITY PROJECT', category: 'Web & full-stack',
     description: 'A patient-journey application for managing clinic patients, appointments and vaccination records. React screens connect to an Express REST API and MySQL database, with authentication and role-aware views.',
-    stack: ['React', 'Express', 'MySQL', 'Authentication'], tone: 'lilac', image: image('travel-jabs-patients.png'), imageAlt: 'Travel Jabs patient list screen with sample demonstration records',
+    stack: ['React', 'Express', 'MySQL', 'Authentication'], image: image('travel-jabs-patients.png'), imageAlt: 'Travel Jabs patient list screen with sample demonstration records',
+    links: { code: repo('TravelJabs-Backend') },
   },
   {
-    number: '03', title: 'Student Expense Tracker', kind: 'POWER APPS · GROUP 17',
+    slug: 'student-expense-tracker', title: 'Student Expense Tracker', kind: 'POWER APPS · GROUP 17', category: 'Design & apps',
     description: 'A student-focused budgeting app for setting category budgets, logging income and expenses, reviewing recent transactions and understanding spending through visual summaries. Designed in Figma and developed in Power Apps with OneDrive Excel as its data source.',
-    stack: ['Power Apps', 'Excel', 'Figma', 'Budgeting'], tone: 'blue', image: image('student-expense-tracker.png'), imageAlt: 'Student Expense Tracker budget screen with category budgets and a spending chart', imageFit: 'contain',
+    stack: ['Power Apps', 'Excel', 'Figma', 'Budgeting'], image: image('student-expense-tracker.png'), imageAlt: 'Student Expense Tracker budget screen with category budgets and a spending chart', imageFit: 'contain',
   },
   {
-    number: '04', title: 'Fitness & Diet Tracker', kind: 'PRODUCT DESIGN · FIGMA',
+    slug: 'fitness-tracker', title: 'Fitness & Diet Tracker', kind: 'PRODUCT DESIGN · FIGMA', category: 'Design & apps',
     description: 'A mobile fitness concept shaped around workout plans and at-a-glance activity goals. Wireframes and linked screens explore navigation, workout details and progress summaries.',
-    stack: ['Figma', 'User flows', 'Prototyping'], tone: 'peach', image: image('fitness-tracker-concept.png'), imageAlt: 'Fitness tracker mobile interface concept', imageFit: 'contain',
+    stack: ['Figma', 'User flows', 'Prototyping'], image: image('fitness-tracker-concept.png'), imageAlt: 'Fitness tracker mobile interface concept', imageFit: 'contain',
   },
   {
-    number: '05', title: 'User Profile Builder', kind: 'JAVA · DESKTOP APPLICATION',
+    slug: 'user-profile-builder', title: 'User Profile Builder', kind: 'JAVA · DESKTOP APPLICATION', category: 'Java',
     description: 'A Java Swing application for creating and managing user profile details. The interface separates titles, names and email information and supports displaying, editing and removing entries.',
-    stack: ['Java', 'Swing', 'Object-oriented design'], tone: 'mint', image: image('user-profile-builder.png'), imageAlt: 'Java Swing User Profile Builder interface',
+    stack: ['Java', 'Swing', 'Object-oriented design'], image: image('user-profile-builder.png'), imageAlt: 'Java Swing User Profile Builder interface',
   },
   {
-    number: '06', title: 'Java CV Builder', kind: 'JAVA · DESKTOP APPLICATION',
+    slug: 'java-cv-builder', title: 'Java CV Builder', kind: 'JAVA · DESKTOP APPLICATION', category: 'Java',
     description: 'A Java Swing desktop app for organising a CV through separate user, contact and preview views. The interface supports maintaining names, titles and email details, then reviewing a custom CV.',
-    stack: ['Java', 'Swing', 'OOP', 'Interface design'], tone: 'lilac', image: image('java-cv-builder.png'), imageAlt: 'Java Swing CV Builder showing user, contact and custom CV preview sections', imageFit: 'contain',
+    stack: ['Java', 'Swing', 'OOP', 'Interface design'], image: image('java-cv-builder.png'), imageAlt: 'Java Swing CV Builder showing user, contact and custom CV preview sections', imageFit: 'contain',
   },
   {
-    number: '07', title: 'Java Blackjack', kind: 'JAVA · INTERACTIVE GAME',
+    slug: 'java-blackjack', title: 'Java Blackjack', kind: 'JAVA · INTERACTIVE GAME', category: 'Java',
     description: 'A console-based Blackjack game structured around reusable Card, Deck and Player classes. It models hands and turns, applies game rules and reports outcomes through an interactive play loop.',
-    stack: ['Java', 'Classes & objects', 'Collections', 'Game logic'], tone: 'peach', image: image('java-blackjack.png'), imageAlt: 'Java Blackjack project source code and console output', imageFit: 'contain',
+    stack: ['Java', 'Classes & objects', 'Collections', 'Game logic'], image: image('java-blackjack.png'), imageAlt: 'Java Blackjack project source code and console output', imageFit: 'contain',
+    links: { code: repo('BlackJackGame') },
   },
   {
-    number: '08', title: 'AI in the Workplace', kind: 'RESEARCH · GROUP PROJECT',
+    slug: 'ai-in-the-workplace', title: 'AI in the Workplace', kind: 'RESEARCH · GROUP PROJECT', category: 'Research & networks',
     description: 'A team research and presentation project exploring how artificial intelligence is being used in workplace settings, combining research, coordinated delivery and clear communication.',
-    stack: ['AI research', 'Teamwork', 'Presentation'], tone: 'blue', visual: 'ai',
+    stack: ['AI research', 'Teamwork', 'Presentation'], visual: 'ai',
   },
   {
-    number: '09', title: 'Personal Portfolio', kind: 'WEB DEVELOPMENT · IN PROGRESS',
-    description: 'This portfolio: a structured React site that brings projects and experience together with responsive layouts, reusable components and a maintainable content model.',
-    stack: ['React', 'Vite', 'CSS', 'GitHub'], tone: 'mint', visual: 'portfolio',
+    slug: 'personal-portfolio', title: 'Personal Portfolio', kind: 'WEB DEVELOPMENT · THIS SITE', category: 'Web & full-stack',
+    description: 'This portfolio: a React and Vite site with a midnight and sky design system, light and dark themes, a command menu, filterable projects and motion that respects reduced-motion settings. It deploys to GitHub Pages on every push.',
+    stack: ['React', 'Vite', 'CSS', 'GitHub Actions'], visual: 'portfolio',
+    links: { code: repo('Personel-Portfolio'), live: 'https://ontech77.github.io/Personel-Portfolio/' },
   },
   {
-    number: '10', title: 'Network simulations', kind: 'CISCO PACKET TRACER · COURSEWORK',
+    slug: 'network-simulations', title: 'Network simulations', kind: 'CISCO PACKET TRACER · COURSEWORK', category: 'Research & networks',
     description: 'Designed and tested a four-subnet network in Cisco Packet Tracer, configuring DHCP pools, DNS and connectivity between devices. Extended the topology with a smart-home IoT gateway and thermostat automation, then set up an email server and verified message exchange between laptops.',
-    stack: ['Packet Tracer', 'IPv4 subnetting', 'DHCP & DNS', 'IoT', 'Email services'], tone: 'lilac', image: image('cisco-packet-tracer.png'), imageAlt: 'Cisco Packet Tracer topology with routers, servers, client devices and smart-home IoT equipment', imageFit: 'contain',
+    stack: ['Packet Tracer', 'IPv4 subnetting', 'DHCP & DNS', 'IoT', 'Email services'], image: image('cisco-packet-tracer.png'), imageAlt: 'Cisco Packet Tracer topology with routers, servers, client devices and smart-home IoT equipment', imageFit: 'contain',
   },
-];
+].map((project, index) => ({ ...project, number: String(index + 1).padStart(2, '0') }));
 
 export const skills = [
   { title: 'Frontend', detail: ['React', 'JavaScript', 'HTML', 'CSS', 'Responsive interfaces'] },
