@@ -97,7 +97,7 @@ These are stated as demonstrated through project work, rather than unsupported a
   All project images use it now.
 - The user also explicitly said not to blur the CV Builder sample information because it is dummy data. The original unblurred `java-cv-builder.png` was restored from commit `c00e3eb`, and the image alt text no longer says names are blurred.
 - After deployment commit `7d43991`, all eight image URLs were checked with HTTP and returned `200`; the Pages workflow completed successfully.
-- Earlier README prose still says sample records in Travel Jabs and CV Builder screenshots are blurred. This is now outdated after the user’s instruction and is a good small correction to make in README next time. Current portfolio data’s Travel Jabs alt text says “sample demonstration records” and no blur note/overlay; check actual screenshot only if changing anything. The explicit no-blur request was made about “the information” after prior CV screenshot treatment, and the CV Builder image is definitely unblurred now.
+- The README’s earlier claim that sample records were blurred was corrected in `0570a4c`. Current portfolio data’s Travel Jabs alt text says “sample demonstration records” and no blur note/overlay; check actual screenshot only if changing anything. The explicit no-blur request was made about “the information” after prior CV screenshot treatment, and the CV Builder image is definitely unblurred now.
 
 ## 4. Current project content
 
@@ -148,7 +148,7 @@ Some site statements originate from earlier user-provided portfolio context. If 
 - `public/images/` stores the eight project image files.
 - `vite.config.js` sets the GitHub Pages base path `/Personel-Portfolio/`.
 - `.github/workflows/deploy.yml` runs `npm ci`, `npm run build`, uploads `dist`, and deploys GitHub Pages on `main` pushes or manual dispatch.
-- `README.md` documents the project and run/deployment instructions; its blur statement should be updated to reflect the latest user instruction.
+- `README.md` documents the project and run/deployment instructions.
 
 Local development commands:
 
@@ -171,6 +171,7 @@ Remote branch is `main`; commits were pushed incrementally. Recent/current histo
 
 | Commit | Message |
 |---|---|
+| `0570a4c` | Add complete conversation handoff notes |
 | `7d43991` | Fix project image paths for GitHub Pages |
 | `c00e3eb` | Configure automatic GitHub Pages deployment |
 | `c95b4ff` | Add evidence-based soft skills section |
@@ -180,7 +181,7 @@ Remote branch is `main`; commits were pushed incrementally. Recent/current histo
 | `70c46b0` | Add complete project archive and portfolio imagery |
 | `04b0373` | Fix unsupported brand icon imports in footer |
 
-At the last confirmed check, `HEAD` and `origin/main` were both `7d43991` and the working tree was clean. The main branch and public repo had not used pull requests for these updates.
+Run `git log` for the current state; this table is a snapshot. The main branch and public repo had not used pull requests for these updates.
 
 ## 8. Conversation/process preferences
 
@@ -195,7 +196,7 @@ At the last confirmed check, `HEAD` and `origin/main` were both `7d43991` and th
 
 ## 9. Known follow-up / discrepancies
 
-1. Update README’s `Content updates` and `Credits` wording: they currently claim the CV Builder screenshot is blurred, but it is now unblurred per the user’s latest clarification.
+1. Resolved in `0570a4c`: README’s `Content updates` and `Credits` wording no longer claims the screenshots are blurred.
 2. Inspect the live site if new visual changes are requested; the most recent production check confirmed all eight image assets returned `200` and the Pages action succeeded.
 3. There was an uncommitted `src/components/Hero.jsx` formatting change visible during the prior image-fix task. It was intentionally not included in commit `7d43991`, and the last filesystem check for this handoff showed a clean tree. Recheck `git status` before relying on that; the contents of Hero.jsx may have been changed/reset by the environment after that task.
 4. Earlier workflow logs emitted GitHub runner/action Node 20 deprecation and upcoming `ubuntu-latest` migration warnings, while the deployment still passed. No action was required for the image fix.
