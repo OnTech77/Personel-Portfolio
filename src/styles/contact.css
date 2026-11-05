@@ -1,0 +1,229 @@
+.contact-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(40px, 7vw, 96px) clamp(26px, 6vw, 80px);
+  border: 1px solid var(--border-strong);
+  border-radius: 32px;
+  background:
+    radial-gradient(80% 90% at 50% 0%, rgba(56, 189, 248, 0.18), transparent 70%),
+    linear-gradient(180deg, var(--bg-elevated), var(--bg-soft));
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 70%);
+}
+
+/* Light beams sweeping down the card */
+.contact-beams {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.contact-beams span {
+  position: absolute;
+  top: -40%;
+  width: 1px;
+  height: 40%;
+  background: linear-gradient(180deg, transparent, var(--sky), transparent);
+  animation: beam 7s linear infinite;
+}
+
+.contact-beams span:nth-child(1) {
+  left: 12%;
+}
+
+.contact-beams span:nth-child(2) {
+  left: 34%;
+  animation-delay: -2s;
+  animation-duration: 9s;
+}
+
+.contact-beams span:nth-child(3) {
+  left: 66%;
+  animation-delay: -4.5s;
+}
+
+.contact-beams span:nth-child(4) {
+  left: 88%;
+  animation-delay: -1s;
+  animation-duration: 10s;
+}
+
+@keyframes beam {
+  to {
+    transform: translateY(380%);
+  }
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-card h2 {
+  max-width: 860px;
+  margin-top: 22px;
+  font-size: clamp(42px, 6.2vw, 80px);
+  font-weight: 600;
+}
+
+.contact-content > p {
+  max-width: 560px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+.contact-email {
+  margin-top: 30px;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+  border-bottom: 2px solid var(--border-strong);
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.contact-email:hover {
+  color: var(--sky-text);
+  border-color: var(--sky);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.contact-actions .icon-button {
+  width: 52px;
+  height: 52px;
+}
+
+.contact-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 32px;
+  margin-top: 48px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.contact-bottom span,
+.contact-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-bottom a:hover {
+  color: var(--text);
+}
+
+/* Footer */
+.footer {
+  padding: 34px 0 44px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer .wordmark {
+  margin-right: 0;
+}
+
+.footer p {
+  margin-right: auto;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-shortcut {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  height: 44px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.footer-shortcut:hover {
+  color: var(--text);
+}
+
+/* Toasts */
+.toaster {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 90;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.toast {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--header-bg);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  animation: toast-in 0.4s var(--ease);
+}
+
+.toast svg {
+  color: #4ade80;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+}
+
+@media (max-width: 700px) {
+  .footer p {
+    order: 3;
+    width: 100%;
+  }
+}

@@ -9,6 +9,7 @@ import Skills from './components/Skills.jsx';
 import SoftSkills from './components/SoftSkills.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
+import Toaster from './components/Toaster.jsx';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <Toaster />
     </ThemeProvider>
   );
 }
