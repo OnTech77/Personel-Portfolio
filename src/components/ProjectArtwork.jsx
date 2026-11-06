@@ -1,50 +1,5 @@
-import { Download, WandSparkles } from 'lucide-react';
-
 /** Illustrations for projects without a screenshot. */
 export default function ProjectArtwork({ type }) {
-  if (type === 'slides') {
-    return (
-      <div className="project-art art-slides" aria-hidden="true">
-        <div className="slides-scene">
-          <div className="md-panel">
-            <span className="md-file">talk.md</span>
-            <span>
-              <b>#</b> My Talk
-            </span>
-            <span className="md-muted">---</span>
-            <span>
-              <b>##</b> Agenda
-            </span>
-            <span>
-              <b>-</b> Why
-            </span>
-            <span>
-              <b>-</b> How
-            </span>
-            <span className="md-muted">Note: say hello</span>
-          </div>
-          <div className="slide-stack">
-            <div className="mini-slide slide-back" />
-            <div className="mini-slide slide-mid" />
-            <div className="mini-slide slide-front">
-              <span className="slide-kicker">SLIDECRAFT</span>
-              <b>Markdown → Slides</b>
-              <i />
-              <i />
-              <i />
-            </div>
-          </div>
-          <span className="art-chip chip-ai">
-            <WandSparkles size={14} /> AI enhance
-          </span>
-          <span className="art-chip chip-pdf">
-            <Download size={14} /> PDF
-          </span>
-        </div>
-      </div>
-    );
-  }
-
   if (type === 'ai') {
     return (
       <div className="project-art art-ai" aria-hidden="true">

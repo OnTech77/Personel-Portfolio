@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowUpRight, Check, ExternalLink } from 'lucide-react';
 import SectionLabel from './SectionLabel.jsx';
 import ProjectArtwork from './ProjectArtwork.jsx';
+import ProjectGallery from './ProjectGallery.jsx';
 import Reveal from './ui/Reveal.jsx';
 import SpotlightCard from './ui/SpotlightCard.jsx';
 import { SHOW_PROJECT } from '../lib/events.js';
@@ -11,12 +12,18 @@ const FILTERS = ['All', ...projectCategories];
 const countFor = (filter) => (filter === 'All' ? projects.length : projects.filter((project) => project.category === filter).length);
 
 function ProjectCard({ project }) {
-  const { slug, number, title, kind, date, description, highlights, stack, image, imageAlt, imageFit, visual, isNew, links } = project;
+  const { slug, number, title, kind, date, description, highlights, stack, image, imageAlt, imageFit, visual, gallery, isNew, links } = project;
 
   return (
-    <SpotlightCard className="project-card" id={`project-${slug}`}>
+    <SpotlightCard className={`project-card${gallery ? ' has-gallery' : ''}`} id={`project-${slug}`}>
       <div className={`project-visual${imageFit === 'contain' ? ' is-contained' : ''}`}>
-        {image ? <img src={image} alt={imageAlt} loading="lazy" /> : <ProjectArtwork type={visual} />}
+        {gallery ? (
+          <ProjectGallery title={title} images={gallery} />
+        ) : image ? (
+          <img src={image} alt={imageAlt} loading="lazy" />
+        ) : (
+          <ProjectArtwork type={visual} />
+        )}
         <span className="project-index">/{number}</span>
         {isNew && <span className="project-new">New</span>}
       </div>

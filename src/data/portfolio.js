@@ -15,7 +15,13 @@ export const projects = [
       'PDF, HTML, Markdown and JSON export, with PDFs rendered by headless Chrome',
       'Sanitised uploads, rate-limited AI requests and security headers on the API',
     ],
-    stack: ['React', 'Vite', 'Node.js', 'Express', 'OpenAI API', 'Ollama', 'Puppeteer'], visual: 'slides',
+    stack: ['React', 'Vite', 'Node.js', 'Express', 'OpenAI API', 'Ollama', 'Puppeteer'],
+    gallery: [
+      { label: 'Write', src: image('slidecraft-write.webp'), alt: 'Slidecraft write step: a Markdown editor with file upload beside an empty slide preview' },
+      { label: 'Theme', src: image('slidecraft-theme.webp'), alt: 'Slidecraft theme step: five slide themes and transition options beside a Midnight title slide' },
+      { label: 'Enhance', src: image('slidecraft-enhance.webp'), alt: 'Slidecraft enhance step: choosing OpenAI or a local Ollama model and an AI action such as improving wording' },
+      { label: 'Export', src: image('slidecraft-export.jpg'), alt: 'Slidecraft export step: PDF, web page, Markdown and JSON formats with a download button' },
+    ],
     links: { code: repo('slidecraft') },
   },
   {
