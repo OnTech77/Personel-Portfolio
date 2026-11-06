@@ -114,27 +114,20 @@ These are stated as demonstrated through project work, rather than unsupported a
 
 Projects in `src/data/portfolio.js` (ten listed here; Slidecraft was added first in November 2026, making eleven):
 
-1. **FacilityHub** — internship full-stack facilities maintenance workflow for clients, dispatchers, and tradespeople; React, Node, Express, MySQL; screenshot `facilityhub-tickets.png`.
-2. **Travel Jabs** — patient/appointment/vaccination record workflow; React, Express, MySQL, authentication; screenshot `travel-jabs-patients.png`.
-3. **Student Expense Tracker** — Power Apps budgeting app; screenshot `student-expense-tracker.png`.
-4. **Fitness & Diet Tracker** — Figma mobile fitness product concept; screenshot `fitness-tracker-concept.png`.
+1. **FacilityHub** — internship full-stack facilities maintenance workflow for clients, dispatchers, and tradespeople; React, Node, Express, MySQL; six-screen gallery (`facilityhub-home/client-tickets/dispatch-queue/jobs-board/users/tradesperson-jobs.jpg`).
+2. **Travel Jabs** — patient/appointment/vaccination record workflow; React, Express, MySQL, authentication; gallery of `travel-jabs-patients.jpg` and `travel-jabs-appointments.jpg` (both unblurred).
+3. **Student Expense Tracker** — Power Apps budgeting app; gallery of `student-expense-overview.png`, `student-expense-tracker.png` (manage budget) and `student-expense-log.png`.
+4. **Fitness & Diet Tracker** — Figma mobile fitness product concept; gallery of `fitness-tracker-concept.png` (Figma flow), `fitness-tracker-home.png` and `fitness-tracker-workout.png`.
 5. **User Profile Builder** — Java Swing profile management desktop app; screenshot `user-profile-builder.png`.
-6. **Java CV Builder** — Java Swing user/contact/CV preview app; screenshot `java-cv-builder.png`, unblurred after user clarification.
+6. **Java CV Builder** — Java Swing user/contact/CV preview app; gallery of `java-cv-builder.png` and `java-cv-preview.png`, both unblurred.
 7. **Java Blackjack** — Java console game with Card, Deck, Player concepts; screenshot `java-blackjack.png`.
 8. **AI in the Workplace** — university group research/presentation project; illustrative CSS art (no supplied screenshot in repo).
 9. **Personal Portfolio** — this React/Vite portfolio; illustrative CSS art.
 10. **Network simulations / Cisco Packet Tracer** — four-subnet, DHCP/DNS, IoT, email project; screenshot `cisco-packet-tracer.png`.
 
-Current public image files under `public/images/`:
+Images live in `public/images/`; `src/data/portfolio.js` is the source of truth for which file each card uses. Projects with several screenshots use a `gallery` array, shown by `ProjectGallery.jsx` with numbered step buttons. Source screenshots are in `/Users/garvnagar/Documents/Project/Personal Website ` (trailing space). Wide ones are resized to 1800px JPEG with `sips -s format jpeg -s formatOptions 82 -Z 1800` (sips cannot write WebP here).
 
-- `facilityhub-tickets.png`
-- `travel-jabs-patients.png`
-- `student-expense-tracker.png`
-- `fitness-tracker-concept.png`
-- `user-profile-builder.png`
-- `java-cv-builder.png`
-- `java-blackjack.png`
-- `cisco-packet-tracer.png`
+On 2026-11-06 the user asked again not to blur anything because all screenshot data is dummy data. The site had still been serving blurred Travel Jabs and CV Builder images; both were replaced with the originals.
 
 ## 5. Education, experience, and contact information in the site
 
