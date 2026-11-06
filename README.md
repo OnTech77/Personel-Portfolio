@@ -8,7 +8,7 @@ A responsive portfolio for Garv Nagar, a Computer Science undergraduate at Kings
 - Animated hero: word-by-word headline, rotating text, count-up stats, aurora light, meteors, a pointer spotlight and a tilting code window
 - Command menu (Cmd K or Ctrl K) to jump to any section or project, copy the email address, switch theme or open GitHub and LinkedIn
 - Eleven project cards, filterable by category, with pointer-following spotlight glow and links to code where a repository is public
-- Slidecraft, Garv's first vibe-coded project, featured with its own illustration
+- Slidecraft, Garv's first vibe-coded project, featured with a screenshot gallery that steps through Write, Theme, Enhance and Export
 - Floating glass header that highlights the section in view, a scroll progress bar and a back-to-top button
 - Timeline that fills as you scroll, internship contribution tiles, a skills marquee and soft skill cards
 - Copy-to-clipboard contact with toast confirmations
@@ -78,4 +78,4 @@ The portfolio is published at [https://ontech77.github.io/Personel-Portfolio/](h
 
 ## Credits
 
-Portfolio content is based on Garv Nagar's supplied education, experience, skills and project profile. Screenshots were supplied for the featured work, including demonstration data. The Cisco Packet Tracer project summary reflects the supplied assignment report without publishing student identifiers or specific network addresses. CSS artwork illustrates projects that did not have screenshots in the supplied folder, including Slidecraft. Interaction ideas were inspired by Aceternity UI and React Bits, reimplemented here without their code or dependencies.
+Portfolio content is based on Garv Nagar's supplied education, experience, skills and project profile. Screenshots were supplied for the featured work, including demonstration data. The Cisco Packet Tracer project summary reflects the supplied assignment report without publishing student identifiers or specific network addresses. CSS artwork illustrates projects that did not have screenshots in the supplied folder. Interaction ideas were inspired by Aceternity UI and React Bits, reimplemented here without their code or dependencies.
