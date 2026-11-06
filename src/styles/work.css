@@ -300,8 +300,33 @@
   opacity: 1;
 }
 
-.project-visual .gallery-image img {
+.project-visual:not(.is-contained) .gallery-image img {
   object-position: left top;
+}
+
+/* Smaller cards get compact step buttons so they stay on one line. */
+.project-cell:not(.is-featured) .gallery-steps {
+  left: 10px;
+  bottom: 10px;
+  gap: 2px;
+  padding: 4px;
+}
+
+.project-cell:not(.is-featured) .gallery-step {
+  gap: 5px;
+  padding: 3px 9px 3px 3px;
+  font-size: 12.5px;
+}
+
+.project-cell:not(.is-featured) .gallery-step span {
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+}
+
+/* Leave room for the step buttons under contained screenshots. */
+.project-visual.is-contained .gallery-image img {
+  padding-bottom: 64px;
 }
 
 .gallery-steps {

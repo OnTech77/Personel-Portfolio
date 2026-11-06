@@ -27,23 +27,45 @@ export const projects = [
   {
     slug: 'facilityhub', title: 'FacilityHub', kind: 'FULL-STACK · INTERNSHIP PROJECT', category: 'Web & full-stack', featured: true,
     description: 'A facilities-maintenance platform that brings clients, dispatchers and tradespeople into one workflow. The team built ticket and job flows backed by role-aware screens, REST APIs and a relational database.',
-    stack: ['React', 'Node.js', 'Express', 'MySQL'], image: image('facilityhub-tickets.png'), imageAlt: 'FacilityHub maintenance ticket dashboard',
+    stack: ['React', 'Node.js', 'Express', 'MySQL'],
+    gallery: [
+      { label: 'Home', src: image('facilityhub-home.jpg'), alt: 'FacilityHub landing page: maintenance requests, fixed faster, with client and tradesperson sign-up buttons' },
+      { label: 'Client', src: image('facilityhub-client-tickets.jpg'), alt: 'Client view of all their tickets with filters and New, In Progress and Cancelled statuses' },
+      { label: 'Dispatch', src: image('facilityhub-dispatch-queue.jpg'), alt: 'Dispatcher dashboard listing new tickets that need assigning, with New, Assigned and Completed counts' },
+      { label: 'Jobs board', src: image('facilityhub-jobs-board.jpg'), alt: 'Dispatcher jobs board with Requested, Assigned, In Progress and History columns' },
+      { label: 'Users', src: image('facilityhub-users.jpg'), alt: 'User management with search, role filters, and tradesperson skills such as HVAC and Painting' },
+      { label: 'Tradesperson', src: image('facilityhub-tradesperson-jobs.jpg'), alt: 'Tradesperson view of current jobs with Mark Complete, and job history' },
+    ],
   },
   {
     slug: 'travel-jabs', title: 'Travel Jabs', kind: 'FULL-STACK · UNIVERSITY PROJECT', category: 'Web & full-stack',
     description: 'A patient-journey application for managing clinic patients, appointments and vaccination records. React screens connect to an Express REST API and MySQL database, with authentication and role-aware views.',
-    stack: ['React', 'Express', 'MySQL', 'Authentication'], image: image('travel-jabs-patients.png'), imageAlt: 'Travel Jabs patient list screen with sample demonstration records',
+    stack: ['React', 'Express', 'MySQL', 'Authentication'],
+    gallery: [
+      { label: 'Patients', src: image('travel-jabs-patients.jpg'), alt: 'Travel Jabs patient list with search and patient cards showing address, postcode and age, using sample data' },
+      { label: 'Appointments', src: image('travel-jabs-appointments.jpg'), alt: 'Travel Jabs appointment list showing patient, clinic, staff, status and time, with reschedule and cancel buttons' },
+    ],
     links: { code: repo('TravelJabs-Backend') },
   },
   {
     slug: 'student-expense-tracker', title: 'Student Expense Tracker', kind: 'POWER APPS · GROUP 17', category: 'Design & apps',
     description: 'A student-focused budgeting app for setting category budgets, logging income and expenses, reviewing recent transactions and understanding spending through visual summaries. Designed in Figma and developed in Power Apps with OneDrive Excel as its data source.',
-    stack: ['Power Apps', 'Excel', 'Figma', 'Budgeting'], image: image('student-expense-tracker.png'), imageAlt: 'Student Expense Tracker budget screen with category budgets and a spending chart', imageFit: 'contain',
+    stack: ['Power Apps', 'Excel', 'Figma', 'Budgeting'], imageFit: 'contain',
+    gallery: [
+      { label: 'Overview', src: image('student-expense-overview.png'), alt: 'Spending overview with total budget, spending and remaining money, plus totals for each category' },
+      { label: 'Budget', src: image('student-expense-tracker.png'), alt: 'Manage budget screen for setting a monthly budget per category, with a pie chart of budgets' },
+      { label: 'Expense log', src: image('student-expense-log.png'), alt: 'Quick expense log form with name, category, amount, date and a recurring payment toggle' },
+    ],
   },
   {
     slug: 'fitness-tracker', title: 'Fitness & Diet Tracker', kind: 'PRODUCT DESIGN · FIGMA', category: 'Design & apps',
     description: 'A mobile fitness concept shaped around workout plans and at-a-glance activity goals. Wireframes and linked screens explore navigation, workout details and progress summaries.',
-    stack: ['Figma', 'User flows', 'Prototyping'], image: image('fitness-tracker-concept.png'), imageAlt: 'Fitness tracker mobile interface concept', imageFit: 'contain',
+    stack: ['Figma', 'User flows', 'Prototyping'], imageFit: 'contain',
+    gallery: [
+      { label: 'Flow', src: image('fitness-tracker-concept.png'), alt: 'Figma canvas showing the linked fitness app screens' },
+      { label: 'Home', src: image('fitness-tracker-home.png'), alt: 'Fitness app home screen with a weekly calendar, today’s workout, and step, calorie and water goals' },
+      { label: 'Workout', src: image('fitness-tracker-workout.png'), alt: 'Workout details screen listing chest exercises with sets, reps and favourites' },
+    ],
   },
   {
     slug: 'user-profile-builder', title: 'User Profile Builder', kind: 'JAVA · DESKTOP APPLICATION', category: 'Java',
@@ -53,7 +75,11 @@ export const projects = [
   {
     slug: 'java-cv-builder', title: 'Java CV Builder', kind: 'JAVA · DESKTOP APPLICATION', category: 'Java',
     description: 'A Java Swing desktop app for organising a CV through separate user, contact and preview views. The interface supports maintaining names, titles and email details, then reviewing a custom CV.',
-    stack: ['Java', 'Swing', 'OOP', 'Interface design'], image: image('java-cv-builder.png'), imageAlt: 'Java Swing CV Builder showing user, contact and custom CV preview sections', imageFit: 'contain',
+    stack: ['Java', 'Swing', 'OOP', 'Interface design'], imageFit: 'contain',
+    gallery: [
+      { label: 'Names', src: image('java-cv-builder.png'), alt: 'CV Builder user tab listing sample names with edit and delete buttons' },
+      { label: 'CV preview', src: image('java-cv-preview.png'), alt: 'Custom CV preview combining sample personal and contact information, with print and save buttons' },
+    ],
   },
   {
     slug: 'java-blackjack', title: 'Java Blackjack', kind: 'JAVA · INTERACTIVE GAME', category: 'Java',
